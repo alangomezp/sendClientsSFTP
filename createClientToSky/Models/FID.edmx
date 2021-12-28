@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FIDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CLIENTES">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NO_CLIENTE" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="NO_TARJETA" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="NOMBRE" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="APELLIDOS" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="DIRECCION" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="ID_SECTOR" Type="int" Nullable="false" />
+          <Property Name="TELEFONO" Type="nchar" MaxLength="15" />
+          <Property Name="CELULAR" Type="nchar" MaxLength="15" />
+          <Property Name="ID_GENERO" Type="int" Nullable="false" />
+          <Property Name="ID_ESTADO_CIVIL" Type="int" Nullable="false" />
+          <Property Name="CORREO_E" Type="nchar" MaxLength="40" />
+          <Property Name="ID_TIENDA" Type="int" Nullable="false" />
+          <Property Name="ID_OCUPACION" Type="int" Nullable="false" />
+          <Property Name="ID_NIVEL_EDUCACION" Type="int" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_AFILIACION" Type="datetime" Nullable="false" />
+          <Property Name="TOTAL_PTOS_GANADOS" Type="int" Nullable="false" />
+          <Property Name="TOTAL_PTOS_REDIMIDOS" Type="int" Nullable="false" />
+          <Property Name="TOTAL_PTOS_VENCIDOS" Type="int" Nullable="false" />
+          <Property Name="TOTAL_COMPRAS" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="CANTIDAD_VISITAS" Type="int" Nullable="false" />
+          <Property Name="FECHA_ULT_COMPRA" Type="datetime" />
+          <Property Name="PTOS_GANADOS" Type="int" Nullable="false" />
+          <Property Name="PTOS_REDIMIDOS" Type="int" Nullable="false" />
+          <Property Name="PTOS_VENCIDOS" Type="int" Nullable="false" />
+          <Property Name="PTOS_DISPONIBLES" Type="int" Nullable="false" />
+          <Property Name="COMPRAS" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="FECHA_ULT_REDENCION" Type="datetime" />
+          <Property Name="USUARIO" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FECHAHORA" Type="datetime" Nullable="false" />
+          <Property Name="INACTIVO" Type="char" MaxLength="1" />
+          <Property Name="EMPLEADO" Type="char" MaxLength="1" />
+          <Property Name="PTOS_PROMOCIONES" Type="int" />
+          <Property Name="NUMERO_ASOCIADO" Type="nvarchar" MaxLength="20" />
+          <Property Name="PARTICIPANTE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="CLIENTES_PARA_SKY">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NO_CLIENTE" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="NO_TARJETA" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="NOMBRE" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="APELLIDOS" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="DIRECCION" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="ID_SECTOR" Type="int" Nullable="false" />
+          <Property Name="TELEFONO" Type="nchar" MaxLength="15" />
+          <Property Name="CELULAR" Type="nchar" MaxLength="15" />
+          <Property Name="ID_GENERO" Type="int" Nullable="false" />
+          <Property Name="ID_ESTADO_CIVIL" Type="int" Nullable="false" />
+          <Property Name="CORREO_E" Type="nchar" MaxLength="40" />
+          <Property Name="ID_TIENDA" Type="int" Nullable="false" />
+          <Property Name="ID_OCUPACION" Type="int" Nullable="false" />
+          <Property Name="ID_NIVEL_EDUCACION" Type="int" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_AFILIACION" Type="datetime" Nullable="false" />
+          <Property Name="TOTAL_PTOS_GANADOS" Type="int" Nullable="false" />
+          <Property Name="TOTAL_PTOS_REDIMIDOS" Type="int" Nullable="false" />
+          <Property Name="TOTAL_PTOS_VENCIDOS" Type="int" Nullable="false" />
+          <Property Name="TOTAL_COMPRAS" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="CANTIDAD_VISITAS" Type="int" Nullable="false" />
+          <Property Name="FECHA_ULT_COMPRA" Type="datetime" />
+          <Property Name="PTOS_GANADOS" Type="int" Nullable="false" />
+          <Property Name="PTOS_REDIMIDOS" Type="int" Nullable="false" />
+          <Property Name="PTOS_VENCIDOS" Type="int" Nullable="false" />
+          <Property Name="PTOS_DISPONIBLES" Type="int" Nullable="false" />
+          <Property Name="COMPRAS" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="FECHA_ULT_REDENCION" Type="datetime" />
+          <Property Name="USUARIO" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="FECHAHORA" Type="datetime" Nullable="false" />
+          <Property Name="INACTIVO" Type="char" MaxLength="1" />
+          <Property Name="EMPLEADO" Type="char" MaxLength="1" />
+          <Property Name="PTOS_PROMOCIONES" Type="int" />
+          <Property Name="NUMERO_ASOCIADO" Type="nvarchar" MaxLength="20" />
+          <Property Name="PARTICIPANTE" Type="char" MaxLength="1" />
+          <Property Name="USADO" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="FIDModelStoreContainer">
+          <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CLIENTES_PARA_SKY" EntityType="Self.CLIENTES_PARA_SKY" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FIDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CLIENTES_PARA_SKY">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NO_CLIENTE" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NO_TARJETA" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="APELLIDOS" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ID_SECTOR" Type="Int32" Nullable="false" />
+          <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="CELULAR" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="ID_GENERO" Type="Int32" Nullable="false" />
+          <Property Name="ID_ESTADO_CIVIL" Type="Int32" Nullable="false" />
+          <Property Name="CORREO_E" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="ID_TIENDA" Type="Int32" Nullable="false" />
+          <Property Name="ID_OCUPACION" Type="Int32" Nullable="false" />
+          <Property Name="ID_NIVEL_EDUCACION" Type="Int32" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_AFILIACION" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TOTAL_PTOS_GANADOS" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_PTOS_REDIMIDOS" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_PTOS_VENCIDOS" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_COMPRAS" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="CANTIDAD_VISITAS" Type="Int32" Nullable="false" />
+          <Property Name="FECHA_ULT_COMPRA" Type="DateTime" Precision="3" />
+          <Property Name="PTOS_GANADOS" Type="Int32" Nullable="false" />
+          <Property Name="PTOS_REDIMIDOS" Type="Int32" Nullable="false" />
+          <Property Name="PTOS_VENCIDOS" Type="Int32" Nullable="false" />
+          <Property Name="PTOS_DISPONIBLES" Type="Int32" Nullable="false" />
+          <Property Name="COMPRAS" Type="Decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="FECHA_ULT_REDENCION" Type="DateTime" Precision="3" />
+          <Property Name="USUARIO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="FECHAHORA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="INACTIVO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EMPLEADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PTOS_PROMOCIONES" Type="Int32" />
+          <Property Name="NUMERO_ASOCIADO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PARTICIPANTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="USADO" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="FIDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CLIENTES_PARA_SKY" EntityType="Self.CLIENTES_PARA_SKY" />
+          <EntitySet Name="CLIENTES" EntityType="FIDModel.CLIENTES" />
+        </EntityContainer>
+        <EntityType Name="CLIENTES">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NO_CLIENTE" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="NO_TARJETA" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="APELLIDOS" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="DIRECCION" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="ID_SECTOR" Type="Int32" Nullable="false" />
+          <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="CELULAR" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="ID_GENERO" Type="Int32" Nullable="false" />
+          <Property Name="ID_ESTADO_CIVIL" Type="Int32" Nullable="false" />
+          <Property Name="CORREO_E" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="ID_TIENDA" Type="Int32" Nullable="false" />
+          <Property Name="ID_OCUPACION" Type="Int32" Nullable="false" />
+          <Property Name="ID_NIVEL_EDUCACION" Type="Int32" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_AFILIACION" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TOTAL_PTOS_GANADOS" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_PTOS_REDIMIDOS" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_PTOS_VENCIDOS" Type="Int32" Nullable="false" />
+          <Property Name="TOTAL_COMPRAS" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="CANTIDAD_VISITAS" Type="Int32" Nullable="false" />
+          <Property Name="FECHA_ULT_COMPRA" Type="DateTime" Precision="3" />
+          <Property Name="PTOS_GANADOS" Type="Int32" Nullable="false" />
+          <Property Name="PTOS_REDIMIDOS" Type="Int32" Nullable="false" />
+          <Property Name="PTOS_VENCIDOS" Type="Int32" Nullable="false" />
+          <Property Name="PTOS_DISPONIBLES" Type="Int32" Nullable="false" />
+          <Property Name="COMPRAS" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="FECHA_ULT_REDENCION" Type="DateTime" Precision="3" />
+          <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="FECHAHORA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="INACTIVO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EMPLEADO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PTOS_PROMOCIONES" Type="Int32" />
+          <Property Name="NUMERO_ASOCIADO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PARTICIPANTE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FIDModelStoreContainer" CdmEntityContainer="FIDEntities">
+          <EntitySetMapping Name="CLIENTES_PARA_SKY">
+            <EntityTypeMapping TypeName="FIDModel.CLIENTES_PARA_SKY">
+              <MappingFragment StoreEntitySet="CLIENTES_PARA_SKY">
+                <ScalarProperty Name="USADO" ColumnName="USADO" />
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="NO_CLIENTE" ColumnName="NO_CLIENTE" />
+                <ScalarProperty Name="NO_TARJETA" ColumnName="NO_TARJETA" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="ID_SECTOR" ColumnName="ID_SECTOR" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+                <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
+                <ScalarProperty Name="ID_ESTADO_CIVIL" ColumnName="ID_ESTADO_CIVIL" />
+                <ScalarProperty Name="CORREO_E" ColumnName="CORREO_E" />
+                <ScalarProperty Name="ID_TIENDA" ColumnName="ID_TIENDA" />
+                <ScalarProperty Name="ID_OCUPACION" ColumnName="ID_OCUPACION" />
+                <ScalarProperty Name="ID_NIVEL_EDUCACION" ColumnName="ID_NIVEL_EDUCACION" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="FECHA_AFILIACION" ColumnName="FECHA_AFILIACION" />
+                <ScalarProperty Name="TOTAL_PTOS_GANADOS" ColumnName="TOTAL_PTOS_GANADOS" />
+                <ScalarProperty Name="TOTAL_PTOS_REDIMIDOS" ColumnName="TOTAL_PTOS_REDIMIDOS" />
+                <ScalarProperty Name="TOTAL_PTOS_VENCIDOS" ColumnName="TOTAL_PTOS_VENCIDOS" />
+                <ScalarProperty Name="TOTAL_COMPRAS" ColumnName="TOTAL_COMPRAS" />
+                <ScalarProperty Name="CANTIDAD_VISITAS" ColumnName="CANTIDAD_VISITAS" />
+                <ScalarProperty Name="FECHA_ULT_COMPRA" ColumnName="FECHA_ULT_COMPRA" />
+                <ScalarProperty Name="PTOS_GANADOS" ColumnName="PTOS_GANADOS" />
+                <ScalarProperty Name="PTOS_REDIMIDOS" ColumnName="PTOS_REDIMIDOS" />
+                <ScalarProperty Name="PTOS_VENCIDOS" ColumnName="PTOS_VENCIDOS" />
+                <ScalarProperty Name="PTOS_DISPONIBLES" ColumnName="PTOS_DISPONIBLES" />
+                <ScalarProperty Name="COMPRAS" ColumnName="COMPRAS" />
+                <ScalarProperty Name="FECHA_ULT_REDENCION" ColumnName="FECHA_ULT_REDENCION" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="FECHAHORA" ColumnName="FECHAHORA" />
+                <ScalarProperty Name="INACTIVO" ColumnName="INACTIVO" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="PTOS_PROMOCIONES" ColumnName="PTOS_PROMOCIONES" />
+                <ScalarProperty Name="NUMERO_ASOCIADO" ColumnName="NUMERO_ASOCIADO" />
+                <ScalarProperty Name="PARTICIPANTE" ColumnName="PARTICIPANTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIENTES">
+            <EntityTypeMapping TypeName="FIDModel.CLIENTES">
+              <MappingFragment StoreEntitySet="CLIENTES">
+                <ScalarProperty Name="PARTICIPANTE" ColumnName="PARTICIPANTE" />
+                <ScalarProperty Name="NUMERO_ASOCIADO" ColumnName="NUMERO_ASOCIADO" />
+                <ScalarProperty Name="PTOS_PROMOCIONES" ColumnName="PTOS_PROMOCIONES" />
+                <ScalarProperty Name="EMPLEADO" ColumnName="EMPLEADO" />
+                <ScalarProperty Name="INACTIVO" ColumnName="INACTIVO" />
+                <ScalarProperty Name="FECHAHORA" ColumnName="FECHAHORA" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="FECHA_ULT_REDENCION" ColumnName="FECHA_ULT_REDENCION" />
+                <ScalarProperty Name="COMPRAS" ColumnName="COMPRAS" />
+                <ScalarProperty Name="PTOS_DISPONIBLES" ColumnName="PTOS_DISPONIBLES" />
+                <ScalarProperty Name="PTOS_VENCIDOS" ColumnName="PTOS_VENCIDOS" />
+                <ScalarProperty Name="PTOS_REDIMIDOS" ColumnName="PTOS_REDIMIDOS" />
+                <ScalarProperty Name="PTOS_GANADOS" ColumnName="PTOS_GANADOS" />
+                <ScalarProperty Name="FECHA_ULT_COMPRA" ColumnName="FECHA_ULT_COMPRA" />
+                <ScalarProperty Name="CANTIDAD_VISITAS" ColumnName="CANTIDAD_VISITAS" />
+                <ScalarProperty Name="TOTAL_COMPRAS" ColumnName="TOTAL_COMPRAS" />
+                <ScalarProperty Name="TOTAL_PTOS_VENCIDOS" ColumnName="TOTAL_PTOS_VENCIDOS" />
+                <ScalarProperty Name="TOTAL_PTOS_REDIMIDOS" ColumnName="TOTAL_PTOS_REDIMIDOS" />
+                <ScalarProperty Name="TOTAL_PTOS_GANADOS" ColumnName="TOTAL_PTOS_GANADOS" />
+                <ScalarProperty Name="FECHA_AFILIACION" ColumnName="FECHA_AFILIACION" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="ID_NIVEL_EDUCACION" ColumnName="ID_NIVEL_EDUCACION" />
+                <ScalarProperty Name="ID_OCUPACION" ColumnName="ID_OCUPACION" />
+                <ScalarProperty Name="ID_TIENDA" ColumnName="ID_TIENDA" />
+                <ScalarProperty Name="CORREO_E" ColumnName="CORREO_E" />
+                <ScalarProperty Name="ID_ESTADO_CIVIL" ColumnName="ID_ESTADO_CIVIL" />
+                <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="ID_SECTOR" ColumnName="ID_SECTOR" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="NO_TARJETA" ColumnName="NO_TARJETA" />
+                <ScalarProperty Name="NO_CLIENTE" ColumnName="NO_CLIENTE" />
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
