@@ -21,7 +21,7 @@ namespace createClientToSky.Models
                 string today = DateTime.Now.ToString("MMddyyHmmss", CultureInfo.InvariantCulture);
                 string fileName = "clientesLog" + today + ".csv";
   
-                string logsPath = Environment.CurrentDirectory + @"\\logsFiles";
+                string logsPath = Environment.CurrentDirectory + @"\logsFiles";
 
                 Directory.CreateDirectory(logsPath);
                 string destFile = Path.Combine(logsPath, fileName);
@@ -42,7 +42,7 @@ namespace createClientToSky.Models
                         catch (Exception ex)
                         {
                             string fileNameError = "clientesError" + today + ".csv";
-                            string errorsPathError = Environment.CurrentDirectory + @"\\errorFiles";
+                            string errorsPathError = Environment.CurrentDirectory + @"\errorFiles";
 
                             Directory.CreateDirectory(errorsPathError);
 

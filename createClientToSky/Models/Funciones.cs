@@ -72,7 +72,7 @@ namespace createClientToSky.Models
                         });
                     }
 
-                    string strFilePath = Environment.CurrentDirectory + @"\\clientes.csv";
+                    string strFilePath = Environment.CurrentDirectory + @"\clientes.csv";
 
                     //Creating csv
                     using (var writer = new StreamWriter(strFilePath))
@@ -113,7 +113,7 @@ namespace createClientToSky.Models
         public void uploadSFTPFile()
         {
             //Settings for upload
-            string source = Environment.CurrentDirectory + @"\\clientes.csv";
+            string source = Environment.CurrentDirectory + @"\clientes.csv";
             string host = "192.168.1.1";
             string username = "user";
             string password = "password";
